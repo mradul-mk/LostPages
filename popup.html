@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search History</title>
+    <style>
+      /* Base styles */
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f7f9fc;
+        width: 400px; /* Set the popup width */
+        box-sizing: border-box;
+      }
+      
+      h3 {
+        color: #333;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+
+      /* Search input styles */
+      #search {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+
+      /* Results container */
+      #results {
+        max-height: 300px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Individual history item */
+      .history-item {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        transition: background-color 0.2s;
+      }
+
+      /* Link styles */
+      .history-item a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+        font-size: 0.95em;
+      }
+
+      .history-item:hover {
+        background-color: #f1f1f1;
+      }
+
+      /* Button styling */
+      button {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Search Your History</h3>
+
+    <!-- Search Input -->
+    <input type="text" id="search" placeholder="Type a keyword to search..." />
+
+    <!-- Results Display -->
+    <div id="results"></div>
+
+    <!-- Button to toggle incognito tracking -->
+    <button id="toggleIncognito">Enable Incognito Tracking</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
